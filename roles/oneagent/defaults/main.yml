@@ -1,7 +1,7 @@
 ---
 # Set environment variables
-oneagent_environment_url: 'https://cox46681.live.dynatrace.com'
-oneagent_paas_token: 'dt0c01.WLKOSSCRKORSHVIPFVW534FE.BVGYTMCX3TSBOBD2OBNJJ7MGV2BVUCYPZVVUHOK5M4ZUA6U3GD45E6YYUZVB4275'
+oneagent_environment_url: 'YOUR ENV URL'
+oneagent_paas_token: 'YOUR TOKEN'
 
 # Set the timeout for platform reboot
 oneagent_reboot_timeout: 3600
