@@ -1,0 +1,9 @@
+---
+oneagent_default_install_dir: /opt/dynatrace/oneagent
+
+oneagent_install_path: "{{ oneagent_passed_install_args
+  | select('regex', 'INSTALL_PATH') | first
+  | default(oneagent_default_install_dir)
+  | regex_replace('INSTALL_PATH=(.*)', '\\1') }}"
+oneagent_ctl_bin_path: "{{ oneagent_install_path }}/agent/tools/oneagentctl"
+

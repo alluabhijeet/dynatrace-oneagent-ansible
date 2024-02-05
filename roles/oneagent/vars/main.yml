@@ -1,0 +1,9 @@
+---
+oneagent_system_name: "{{ ansible_system|lower }}"
+oneagent_system_is_unix: "{{ oneagent_system_name in [ 'aix', 'linux' ] }}"
+oneagent_system_is_windows: "{{ oneagent_system_name == 'win32nt' }}"
+oneagent_system_family:
+  "{{ oneagent_system_is_windows | ternary('windows', 'unix') }}"
+
+oneagent_passed_install_args:
+  "{{ (oneagent_install_args) | unique }}"

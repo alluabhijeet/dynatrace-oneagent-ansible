@@ -1,0 +1,7 @@
+
+oneagent_configuration_failed: "Configuration failed, exit code: %d, output: %s %s"
+oneagent_install_dir_contains_spaces: "Installation directory must not contain spaces"
+oneagent_download_dir_contains_spaces: "Download directory must not contain spaces"
+oneagent_missing_mandatory_params: "One or more mandatory variables are not defined. Please see documentation for further information."
+oneagent_unknown_arch: "Unknown architecture '%s'. Available architectures are: %s."
+oneagent_reboot_failed: "Failed to reboot the host"

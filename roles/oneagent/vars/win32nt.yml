@@ -1,0 +1,14 @@
+---
+oneagent_default_arch: x86
+oneagent_default_install_dir:
+  "{{ ansible_env.SystemDrive }}\\Program Files\\dynatrace\\oneagent"
+
+oneagent_download_system: windows
+
+oneagent_install_path: "{{ oneagent_passed_install_args
+  | select('regex', 'INSTALL_PATH') | first
+  | default(oneagent_default_install_dir)
+  | regex_replace('INSTALL_PATH=(.*)', '\\1') }}"
+oneagent_ctl_bin_path:
+  "{{ oneagent_install_path }}\\agent\\tools\\oneagentctl.exe"
+

@@ -1,0 +1,12 @@
+---
+- name: Load variables based on OS
+  include_vars: vars/{{ oneagent_system_name }}.yml
+
+- name: Load messages
+  include_vars: vars/messages.yml
+
+- name: Apply OneAgent configuration
+  include_tasks: tasks/config/config.yml
+
+
+
