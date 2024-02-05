@@ -7,6 +7,6 @@ all:
           children:
             linux_other:
               hosts:
-                64.225.56.190
+                host1
       vars:
         ansible_become: true
