@@ -1,7 +1,1 @@
 ---
-# Set environment variables
-oneagent_environment_url: 'YOUR ENV URL'
-oneagent_paas_token: 'YOUR TOKEN'
-
-# Set the timeout for platform reboot
-oneagent_reboot_timeout: 3600
