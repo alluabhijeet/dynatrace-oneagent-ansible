@@ -1,16 +1,19 @@
 ---
 - name: Apply host level configuration with oneagentctl
-  hosts: dev
+  hosts: all
   collections:
     - dynatrace.oneagent
   vars:
     oneagent_install_args:
       - "--set-network-zone={{ network_zone }}"
       - "{% if host_group %}--set-host-group={{ host_group }}{% endif %}"
-      - "--set-server={{ dynatrace_server }}"
-      - "--set-tenant={{ dynatrace_tenant }}"
+      - "--set-tenant-token={{ tenant_token }}"
+      - "--set-server={{ server }}"
+      - "--set-tenant={{ tenant }}"
+      - "{% if host_property %}--set-host-property {{ host_property }}{% endif %}"
       - "--restart-service"
 
   tasks:
     - import_role:
         name: oneagent
+

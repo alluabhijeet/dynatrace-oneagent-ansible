@@ -4,10 +4,15 @@
     path: "{{ oneagent_ctl_bin_path }}"
   register: _oneagent_ctl_state
 
+#- name: Test ActiveGate connectivity
+#  command: "nc -vz {{server}}"
+#  register: _oneagent_ctl_activegate_reachable
+#  when: _oneagent_ctl_state.stat.exists
+
 - name: Applying OneAgent configuration
   command: "{{ oneagent_ctl_bin_path }} {{ _oneagent_all_config_args | join(' ') }}"
   no_log: false
-  ignore_errors: true
+  ignore_errors: false
   changed_when: true
   register: _oneagent_config_result
   when: _oneagent_ctl_state.stat.exists
