@@ -17,6 +17,5 @@ Use `ansible-playbook oneagentctl_config.yml -i inventory.yml` to run the playbo
 
 ## Dynatrace SaaS Migration Documentation
 
-```
-[Official Documenation]https://docs.dynatrace.com/managed/upgrade/up-execute-upgrade/up-migrate-oa
-```
+[Official Documenation](https://docs.dynatrace.com/managed/upgrade/up-execute-upgrade/up-migrate-oa)
+
