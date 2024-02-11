@@ -13,3 +13,8 @@ Using this collection requires the following:
 Edit the inventory.yml, oneagent_config.yml and roles/default/main.yml  
 
 Use `ansible-playbook oneagentctl_config.yml -i inventory.yml` to run the playbook
+
+
+## Dynatrace SaaS Migration Documentation
+
+[Official Documenation]https://docs.dynatrace.com/managed/upgrade/up-execute-upgrade/up-migrate-oa
